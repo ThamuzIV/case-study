@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./case_study.css">
+    <style>
+        /* .menu {
+            border:none
+            
+        } */
+    </style>
+    <title>Case Study</title>
+</head>
+
+<body>
+    <section>
+        <div class="container divto">
+            <div class="row">
+                <div class="mainContro ">
+                    <div class="header">
+                        <h1>Student management</h1>
+                    </div>
+
+                    <div class="alo">
+                        <input type="text" id="acc" class="login" placeholder="Acccount">
+                        <input type="password" id="pass" class="login" placeholder="Password">
+                        <input type="password" id="checkPass" class="registration" placeholder="Retype">
+                        <button onclick="login()" class="login buttonLogin">Log in</button>
+                        <button onclick="gotoFormCreate()" class="login buttonLogin ">No have acc</button>
+                        <button onclick="createNew()" class="registration">Create </button>
+
+                        <input type="text" id="name" class="newInfomation" placeholder="Full name">
+                        <input type="number" id="phoneNumber" class="newInfomation" placeholder="Phone number">
+                        <input type="email" id="email" class="newInfomation" placeholder="Email">
+                        <select name="" id="sex" class="newInfomation">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <select name="" id="classStudy" class="newInfomation">
+                            <option value="ibsk1d1">ibsk1d1</option>
+                            <option value="ibsk1d2">ibsk1d2</option>
+                        </select>
+                        <button onclick="addNewInformation()" class="newInfomation">sumit</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row d-flex">
+        <div class="col-md-3 " style="margin: auto;">
+            <input type="text" class="menu" id="nameMenu" disabled>
+            <input type="text" class="menu" id="sexMenu" disabled>
+            <input type="text" class="menu" id="classMenu" disabled>
+            <input type="text" class="menu" id="phoneMenu" disabled>
+            <input type="text" class="menu" id="emailMenu" disabled>
+        
+            <div>
+                <button onclick="deleteAcc()" class="menuButton">Delete</button>
+                <button onclick="edit()" class="menuButton" id="edit">Edit</button>
+                <button onclick="changeInformation()" id="change">change</button>
+                <button onclick="logOut()" class="menuButton"> Log out</button>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <script src="./haha.js"></script>
+    <script src="./case_study_1.js"></script>
+
+</body>
+
+</html>
