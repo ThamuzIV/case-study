@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas{ background: rgb(229, 213, 243);  display: block; margin: auto;}
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500" ></canvas>
+    <button onclick="play()">Play</button>
+    <script>
+        var canvas = document.getElementById("myCanvas"),
+            meteor = canvas.getContext("2d"),
+            ctx = canvas.getContext("2d");
+
+        var skyX,skyY;
+        const G = -9.8;
+
+        // meteorite diagonal fall
+        var dx=-0.8,
+            dy=2;
+
+        skyX = 200;
+        skyY = 200;
+        
+
+        function play() {
+            meteorFall();
+        }
+
+        function creatMeteor() {
+            meteor.beginPath();
+            meteor.arc(skyX, skyY, 10, 10, 5.5,Math.PI*2);
+            meteor.strokeStyle = "rgba(200,55,1)";
+            meteor.stroke();
+            meteor.closePath();
+        }
+
+        function meteorFall() {    
+            meteor.clearRect(0,0,canvas.width,canvas.height);
+            creatMeteor();
+            skyX += dx;
+            skyY += dy;    
+        }
+
+        setInterval(meteorFall,10);
+        setInterval(meteorFall,8);
+
+    </script>
+</body>
+</html>
